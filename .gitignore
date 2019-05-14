@@ -41,3 +41,11 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Other directories
+build
+dist
+gedcomx_python.egg-info
+
+# Python compiled files.
+*.pyc
