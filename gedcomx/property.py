@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 
-import collections
+try:
+    from collections.abc import MutableMapping, MutableSequence
+except ImportError:
+    from collections import MutableMapping, MutableSequence
+
 import unittest
 
 
-class ListProperty(collections.abc.MutableSequence):
+class ListProperty(MutableSequence):
     """Basic list to hold only items of a pre-defined data type. Kind of emulates std::vector<data_type> (C++) or
     List<data_type> java.
     """
@@ -92,7 +96,7 @@ class ListProperty(collections.abc.MutableSequence):
         self.extend(obj)
 
 
-class DictProperty(collections.abc.MutableMapping):
+class DictProperty(MutableMapping):
     """Basic dictionary to hold only items of a pre-defined data type. Same as :class:`.ListProperty` but with key
     indices."""
 
