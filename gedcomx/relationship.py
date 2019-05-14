@@ -37,7 +37,7 @@ class Relationship(Subject):
         elif isinstance(person, ResourceReference):
             self.person1 = person
         else:
-            raise TypeError, "Expected Type Person or ResourceReference"
+            raise TypeError("Expected Type Person or ResourceReference")
 
     def setPerson2(self, person):
         if isinstance(person, Person):
@@ -45,4 +45,4 @@ class Relationship(Subject):
         elif isinstance(person, ResourceReference):
             self.person2 = person
         else:
-            raise TypeError, "Expected Type Person or ResourceReference"
+            raise TypeError("Expected Type Person or ResourceReference")

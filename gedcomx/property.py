@@ -4,7 +4,7 @@ import collections
 import unittest
 
 
-class ListProperty(collections.MutableSequence):
+class ListProperty(collections.abc.MutableSequence):
     """Basic list to hold only items of a pre-defined data type. Kind of emulates std::vector<data_type> (C++) or
     List<data_type> java.
     """
@@ -62,11 +62,11 @@ class ListProperty(collections.MutableSequence):
         :param data: <python> list of `data_type` objects.
         """
         if not isinstance(data, (list, ListProperty)):
-            raise TypeError, "data should be of type list. Got %s" % str(type(data))
+            raise TypeError("data should be of type list. Got %s" % str(type(data)))
         for el in data:
             if not isinstance(el, self.data_type):
-                raise TypeError, "data should be a list containing %s objects. Got %s" % (
-                                                                                     str(self.data_type), str(type(el)))
+                raise TypeError("data should be a list containing %s objects. Got %s" % \
+                                (str(self.data_type), str(type(el))))
         self.clear()
         for item in data:
             self.data.append(item)
@@ -92,7 +92,7 @@ class ListProperty(collections.MutableSequence):
         self.extend(obj)
 
 
-class DictProperty(collections.MutableMapping):
+class DictProperty(collections.abc.MutableMapping):
     """Basic dictionary to hold only items of a pre-defined data type. Same as :class:`.ListProperty` but with key
     indices."""
 
