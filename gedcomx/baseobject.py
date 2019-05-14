@@ -72,4 +72,4 @@ class BaseObject(object):
 
     def dump(self):
         import json
-        print json.dumps(self.to_dict(), indent=4, separators=(',', ':'))
+        print(json.dumps(self.to_dict(), indent=4, separators=(',', ':')))
