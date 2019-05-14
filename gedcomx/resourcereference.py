@@ -16,7 +16,7 @@ class ResourceReference(BaseObject):
         if isinstance(obj, GedcomXObject):
             self.resource = '#' + obj.id
             super(ResourceReference, self).__init__()
-        elif isinstance(obj, (str, unicode)):
+        elif isinstance(obj, str):
             self.resource = obj
             super(ResourceReference, self).__init__()
         else:

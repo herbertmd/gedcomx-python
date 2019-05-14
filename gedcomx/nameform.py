@@ -19,7 +19,7 @@ class NameForm(ExtensibleData):
         self.fullText = ""
         self.parts = ListProperty(NamePart)
         self.fields = ListProperty(Field)
-        if isinstance(obj, (str, unicode)):
+        if isinstance(obj, str):
             self.fullText = obj
             super(NameForm, self).__init__()
         else:

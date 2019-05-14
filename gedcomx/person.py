@@ -44,7 +44,7 @@ class Person(Subject):
     def setName(self, name):
         if isinstance(name, Name):
             self.names.append(name)
-        elif isinstance(name, (str, unicode)):
+        elif isinstance(name, str):
             self.names.append(Name(name))
         else:
             print("Error while setting Name")

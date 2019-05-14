@@ -12,7 +12,7 @@ class TextValue(BaseObject):
     def __init__(self, obj=None):
         self.lang = ""
         self.value = ""
-        if isinstance(obj, (str,unicode)):
+        if isinstance(obj, str):
             self.value = obj
         else:
             super(TextValue, self).__init__(obj)

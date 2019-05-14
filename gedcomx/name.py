@@ -22,7 +22,7 @@ class Name(Conclusion):
         self.date = Date()
         self.nameForms = ListProperty(NameForm)
 
-        if isinstance(obj, (str, unicode)):
+        if isinstance(obj, str):
             self.nameForms.append( NameForm(obj) )
             super(Name, self).__init__()
         else:
