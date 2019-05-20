@@ -94,6 +94,6 @@ class DescendancyTree:
             node = self.root
         if node is None:
             return
-        print node
+        print(node)
         for child in node.children:
             self.printTree(child)

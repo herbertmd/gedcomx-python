@@ -193,7 +193,7 @@ class PersonState(GedcomxApplicationState):
         gx.persons.append(person)
         request = self.createAuthenticatedGedcomxRequest("POST", url=self.getSelfUri())
         request.data = json.dumps(gx.to_dict())
-        print gx.persons
+        print(gx.persons)
         return self.stateFactory.buildPersonState(self.session, request, self.invoke(request), self.accessToken)
 
     def addGender(self, gender):

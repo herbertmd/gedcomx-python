@@ -56,7 +56,7 @@ class AncestryTree:
                     ancestry.append(None)
                 ancestry[number-1] = person
             except ValueError:
-                print "Error parsing ascendancy Number: Got %s" % ascendancyNumber
+                print("Error parsing ascendancy Number: Got %s" % ascendancyNumber)
 
         return ancestry
 
