@@ -5,7 +5,7 @@ import gedcomx
 setup(
     name='gedcomx-python',
     version=gedcomx.__version__,
-	url='http://github.com/chrisworley/gedcomx-python',
+	url='http://github.com/herbertmd/gedcomx-python',
 	author='Christopher Worley',
 	author_email='chris@chris-worley.com',
 	packages=find_packages(),
