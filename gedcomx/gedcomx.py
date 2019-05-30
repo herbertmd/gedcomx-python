@@ -2,6 +2,7 @@
 
 from .agent import Agent
 from .attribution import Attribution
+from .property import DictProperty
 from .property import ListProperty
 from .document import Document
 from .event import Event
@@ -47,12 +48,12 @@ class Gedcomx(HyperMediaEnabledData):
         self.description = ""
         self.profile = ""
         self.attribution = Attribution()
-        self.persons = ListProperty(Person)
+        self.persons = DictProperty(Person)
         self.relationships = ListProperty(Relationship)
         self.sourceDescriptions = ListProperty(SourceDescription)
         self.agents = ListProperty(Agent)
         self.events = ListProperty(Event)
-        self.places = ListProperty(PlaceDescription)
+        self.places = DictProperty(PlaceDescription)
         self.documents = ListProperty(Document)
         self.collections = ListProperty(Collection)
         self.fields = ListProperty(Field)
