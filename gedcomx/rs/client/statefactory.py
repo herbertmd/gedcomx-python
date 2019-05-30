@@ -21,7 +21,7 @@ from .placedescriptionsstate import PlaceDescriptionsState
 from .placedescriptionstate import PlaceDescriptionState
 from .personsearchresultsstate import PersonSearchResultsState
 from .relationshipstate import RelationshipState
-from relationshipsstate import RelationshipsState
+from .relationshipsstate import RelationshipsState
 
 
 class StateFactory(object):
