@@ -17,6 +17,7 @@ class PlaceDescription(Subject):
     :ivar TextValue[] names: An ordered list of standardized (or normalized), fully-qualified (in terms of what is
                              known of the applicable jurisdictional hierarchy) names for this place that are applicable
                              to this description of this place.
+    :ivar str city: The city corresponding to this place description.
     :ivar Date temporalDescription: A description of the time period to which this place description is relevant.
     :ivar float latitude: Degrees north or south of the Equator.
     :ivar float longitude: Angular distance in degrees, relative to the Prime Meridian.
@@ -29,6 +30,7 @@ class PlaceDescription(Subject):
     def __init__(self, obj=None):
         self.type = ""
         self.names = ListProperty(TextValue)
+        self.city = ""
         self.temporalDescription = Date()
         self.latitude = 0.0
         self.longitude = 0.0
